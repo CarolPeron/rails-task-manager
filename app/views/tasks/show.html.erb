@@ -1,0 +1,15 @@
+<h1>Info of <%= @task.title %></h1>
+
+<p>title: <%= @task.title %></p>
+<p>details: <%= @task.details %></p>
+
+
+<p>
+  <%= link_to 'All Tasks', tasks_path %>
+</p>
+<p>
+  <%= link_to 'Edit', edit_task_path(@task) %>
+</p>
+<p>
+  <%= link_to 'Remove', task_path(@task), method: 'delete', data: { confirm: 'Are you sure?' } %>
+</p>
